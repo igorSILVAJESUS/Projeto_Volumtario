@@ -11,7 +11,7 @@ body {
   scroll-behavior: smooth;
 }
 
-/* Paleta exclusiva: AZUL, LARANJA, BRANCO */
+
 :root {
   --azul-profundo: #0B3B5F;
   --azul-claro: #1E5A7D;
@@ -22,7 +22,7 @@ body {
   --texto-escuro: #122b3c;
 }
 
-/* Utility */
+
 .section {
   padding: 4rem 2rem;
   max-width: 1280px;
@@ -63,7 +63,7 @@ h3 {
   box-shadow: 0 10px 20px rgba(244, 124, 46, 0.3);
 }
 
-/* HEADER / NAV */
+
 .hero {
   background: linear-gradient(135deg, var(--azul-profundo) 0%, #0f4c6e 100%);
   color: white;
@@ -148,7 +148,7 @@ nav ul li a:hover {
   border: 3px solid var(--laranja-vibrante);
 }
 
-/* Voluntariado (intro) */
+
 #voluntariado {
   background: var(--branco-puro);
   text-align: center;
@@ -162,7 +162,7 @@ nav ul li a:hover {
   line-height: 1.5;
 }
 
-/* Cards Causa */
+
 .cards {
   display: flex;
   flex-wrap: wrap;
@@ -204,7 +204,7 @@ nav ul li a:hover {
   margin-top: 0.5rem;
 }
 
-/* Projeto box */
+
 .projeto-box {
   background: var(--cinza-suave);
   border-radius: 36px;
@@ -246,7 +246,7 @@ nav ul li a:hover {
   margin: 0.4rem 0;
 }
 
-/* formulário */
+
 .formulario {
   background: linear-gradient(to bottom right, #fef7f0, white);
   border-radius: 48px;
@@ -320,7 +320,7 @@ input:focus, select:focus {
   margin-top: 0.4rem;
 }
 
-/* desenvolvedor */
+
 .desenvolvedor {
   background: var(--cinza-suave);
   border-radius: 48px;

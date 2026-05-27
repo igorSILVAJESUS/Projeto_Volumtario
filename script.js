@@ -1,10 +1,9 @@
-// Recreio Solidário - JavaScript com localStorage e validações
+
 
 (function() {
   const STORAGE_KEY = 'recreio_solidario_voluntarios';
   let voluntarios = [];
 
-  // Carregar dados do localStorage
   function loadFromStorage() {
     const stored = localStorage.getItem(STORAGE_KEY);
     if (stored) {
@@ -14,7 +13,7 @@
         voluntarios = [];
       }
     } else {
-      // Dados de exemplo para demonstração
+    
       voluntarios = [
         { nome: "Ana Clara", idade: 16, email: "ana@escola.com", turma: "2° Médio", atividade: "Esportes" },
         { nome: "Lucas Mendes", idade: 15, email: "lucas@escola.com", turma: "1° Médio", atividade: "Jogos" }
@@ -24,12 +23,11 @@
     updateCounterDisplay();
   }
 
-  // Salvar no localStorage
   function saveToStorage() {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(voluntarios));
   }
 
-  // Atualizar contador na tela
+
   function updateCounterDisplay() {
     const contadorSpan = document.getElementById('contador');
     if (contadorSpan) {
@@ -37,9 +35,9 @@
     }
   }
 
-  // Adicionar novo voluntário
+  
   function addVoluntario(nome, idade, email, turma, atividade) {
-    // Verificar duplicidade de e-mail
+  
     const existe = voluntarios.some(v => v.email.toLowerCase() === email.toLowerCase());
     if (existe) {
       return { 
@@ -65,7 +63,7 @@
     };
   }
 
-  // Configurar formulário
+  
   const form = document.getElementById('formVoluntario');
   const msgDiv = document.getElementById('mensagem');
 
@@ -79,7 +77,7 @@
       const turma = document.getElementById('turma').value.trim();
       const atividade = document.getElementById('atividade').value;
 
-      // Validações
+      
       if (!nome || !idade || !email || !turma) {
         msgDiv.innerHTML = '<span style="color:#d9534f;">❌ Por favor, preencha todos os campos obrigatórios.</span>';
         return;
@@ -101,7 +99,7 @@
         msgDiv.innerHTML = `<span style="color:#0B3B5F; background:#EFF7FF; padding:0.6rem 1rem; border-radius:50px; display:inline-block;">✅ ${result.message}</span>`;
         form.reset();
         
-        // Limpar mensagem após 4 segundos
+        
         setTimeout(() => {
           if (msgDiv) msgDiv.innerHTML = '';
         }, 4000);
@@ -110,11 +108,9 @@
       }
     });
   }
-
-  // Inicializar aplicação
+ 
   loadFromStorage();
 
-  // Scroll suave para links do menu (já vem do CSS scroll-behavior, mas garantia extra)
   document.querySelectorAll('nav a, .btn').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       const hash = this.getAttribute('href');
